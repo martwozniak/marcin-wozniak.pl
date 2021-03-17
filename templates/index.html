@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcin Woźniak</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Custom -->
+    <style>
+        .fullwidthimg {
+            width: 100%;
+            height: 500px;
+            max-height: 600px;
+            background: url("https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+            animation-name: imageSwitch;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes colorSwitch {
+            0%   {background-color: rgba(197, 17, 17, 0.452);}
+            25%  {background-color: rgba(21, 21, 172, 0.5);}
+            50%  {background-color: rgba(60, 189, 60, 0.61);}
+            100% {background-color: rgba(158, 40, 40, 0.63);}
+        }
+        @keyframes imageSwitch {
+            0%   {filter: invert(9%) sepia(99%) saturate(7031%) hue-rotate(16deg) brightness(92%) contrast(101%);}
+            25%  {filter: invert(17%) sepia(100%) saturate(7079%) hue-rotate(353deg) brightness(31%) contrast(106%);}
+            50%  {filter: invert(79%) sepia(80%) saturate(544%) hue-rotate(27deg) brightness(38%) contrast(92%);}
+            90%  {filter: invert(10%) sepia(99%) saturate(7350%) hue-rotate(277deg) brightness(30%) contrast(118%);}
+            100% {filter: invert(44%) sepia(69%) saturate(1619%) hue-rotate(162deg) brightness(35%) contrast(102%);}
+        }
+        .h-bg-green:hover {
+            background: rgba(17, 153, 17, 0.342);
+        }
+        .h-bg-blue:hover {
+            background: rgba(27, 136, 209, 0.342);
+        }
+        .h-bg-red:hover {
+            background: rgba(209, 63, 27, 0.342);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="https://marcinwozniak.com.pl/wp-content/uploads/2021/03/cropped-MW-Logo.png" alt="" width="120" height="34" class="d-inline-block align-top">
+          </a>
+        </div>
+        </div>
+      </nav>
+
+    <div class="fullwidthimg">
+
+    </div>
+    <div class="container">
+        <h1>Marcin Woźniak</h1>
+        <div class="row">
+            <a href="/resume" class="col">
+                <div class="card p-3 h-bg-red">
+                    <strong>Resume</strong>
+                </div>
+            </a>
+            <a href="/resume" class="col">
+                <div class="card p-3 h-bg-blue">
+                    <strong>Portfolio</strong>
+                </div>
+            </a>
+            <a href="/resume" class="col">
+                <div class="card p-3 h-bg-green">
+                    <strong>Contact</strong>
+                </div>
+            </a>
+        </div>
+       
+    </div>
+</body>
+</html>
