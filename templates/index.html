@@ -11,11 +11,26 @@
     <!-- Custom -->
     <style>
         ::selection {
-            background-color: rgba(20, 161, 50, 0.151);
+            background-color: rgba(33, 204, 33, 0.219);
+        }
+        .navbar-light .navbar-nav .nav-link {
+            transition: all .2s;
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: rgb(33, 204, 33) !important;
+            font-weight: bolder;
+            font-size: 1.5rem;
         }
         .fullwidthimg {
             position: relative;
+            width: 100%;
+            height: 500px;
+            max-height: 600px;
+            animation-name: colorSwitch;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
         }
+        /*
         .fullwidthimg img {
             width: 100%;
             height: 500px;
@@ -23,8 +38,8 @@
             animation-name: imageSwitch;
             animation-duration: 12s;
             animation-iteration-count: infinite;
-        }
-        .fullwidthimg h1 {
+        }*/
+        .fullwidthimg .horizontalCenter {
             position: absolute;
             top: 50%;
             font-weight: bolder;
@@ -32,10 +47,10 @@
         }
 
         @keyframes colorSwitch {
-            0%   {background-color: rgba(197, 17, 17, 0.452);}
-            25%  {background-color: rgba(21, 21, 172, 0.5);}
-            50%  {background-color: rgba(60, 189, 60, 0.61);}
-            100% {background-color: rgba(158, 40, 40, 0.63);}
+            0%   {background-color: rgba(16, 184, 86, 0.842);}
+            25%  {background-color: rgba(49, 49, 165, 0.829);}
+            50%  {background-color: rgba(134, 20, 228, 0.61);}
+            100% {background-color: rgba(36, 139, 82, 0.89);}
         }
         @keyframes imageSwitch {
             0%   {filter: invert(9%) sepia(99%) saturate(7031%) hue-rotate(16deg) brightness(92%) contrast(101%);}
@@ -53,24 +68,53 @@
         .h-bg-red:hover {
             background: rgba(209, 63, 27, 0.342);
         }
+        /* Media */
+
+        @media (max-width: 600px) {
+            .fullwidthimg {
+                height: 200px;
+                max-height: 200px;
+            }
+            .fullwidthimg .horizontalCenter {
+                position: absolute;
+                top: 25%;
+                font-weight: bolder;
+                color: rgb(247, 247, 247);
+            }
+        }
        
     </style>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <div class="container">
-          <a class="navbar-brand" href="#">
+        <div class="container">
+    
+          <a class="navbar-brand" href="/">
             <img src="https://marcinwozniak.com.pl/wp-content/uploads/2021/03/cropped-MW-Logo.png" alt="" width="120" height="34" class="d-inline-block align-top">
           </a>
-        </div>
-        </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="/resume">Resume</a>
+              <a class="nav-link" href="/portfolio">Portfolio</a>
+              <a class="nav-link" href="/contact">Contact</a>
+            </div>
+          </div>
       </nav>
 
     <div class="fullwidthimg">
-        <img src="https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
         <div class="container">
-            <h1>Marcin Woźniak Interactive Resume</h1>
+            <div class="horizontalCenter">
+
+                <h1>Marcin Woźniak Interactive Resume</h1>
+                <span>Resume, Portfolio and more</span>
+           
+            </div> 
         </div>
     </div>
     <div class="container mt-2">
