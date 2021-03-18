@@ -10,14 +10,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- Custom -->
     <style>
+        ::selection {
+            background-color: rgba(20, 161, 50, 0.151);
+        }
         .fullwidthimg {
+            position: relative;
+        }
+        .fullwidthimg img {
             width: 100%;
             height: 500px;
             max-height: 600px;
-            background: url("https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
             animation-name: imageSwitch;
             animation-duration: 12s;
             animation-iteration-count: infinite;
+        }
+        .fullwidthimg h1 {
+            position: absolute;
+            top: 50%;
+            font-weight: bolder;
+            color: rgb(247, 247, 247);
         }
 
         @keyframes colorSwitch {
@@ -42,6 +53,7 @@
         .h-bg-red:hover {
             background: rgba(209, 63, 27, 0.342);
         }
+       
     </style>
 </head>
 <body>
@@ -56,23 +68,28 @@
       </nav>
 
     <div class="fullwidthimg">
-
+        <img src="https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+        <div class="container">
+            <h1>Marcin Woźniak Interactive Resume</h1>
+        </div>
     </div>
-    <div class="container">
-        <h1>Marcin Woźniak</h1>
+    <div class="container mt-2">
         <div class="row">
             <a href="/resume" class="col">
                 <div class="card p-3 h-bg-red">
+                    <img src="https://www.svgrepo.com/show/317795/actions-add-file.svg" alt="" style="width: 30px">
                     <strong>Resume</strong>
                 </div>
             </a>
-            <a href="/resume" class="col">
+            <a href="/portfolio" class="col">
                 <div class="card p-3 h-bg-blue">
+                    <img src="https://www.svgrepo.com/show/317811/actions-code.svg" alt="" style="width: 30px">
                     <strong>Portfolio</strong>
                 </div>
             </a>
-            <a href="/resume" class="col">
+            <a href="/contact" class="col">
                 <div class="card p-3 h-bg-green">
+                    <img src="https://www.svgrepo.com/show/317820/actions-go-out.svg" alt="" style="width: 30px">
                     <strong>Contact</strong>
                 </div>
             </a>
